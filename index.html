@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv='content-language' content='zh-CN'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>API中转站|【2025年领先】AI大模型中转服务 - 专业ChatGPT/Claude/Deepseek API接口提供商</title>
+<meta name="description" content="专业API中转站服务，提供企业级AI大模型API接口中转。支持ChatGPT API、Claude API、Deepseek API等全系列模型，国内稳定直连，延迟低至50ms，比官方低价20-40%。免费注册即送API调用额度，7×24小时稳定服务！" />
+<meta name="keywords" content="API中转站,API中转服务,AI API中转,大模型API中转,中转API服务,ChatGPT API中转,Claude API中转,Deepseek API中转,API接口代理,国内API中转,稳定API中转,低延迟API中转" />
+<meta property="og:title" content="API中转站 | 国内直连AI大模型API服务 - 低成本稳定快速" />
+<meta property="og:description" content="专业API中转站，提供ChatGPT/Claude/Deepseek等AI大模型API接口。国内直连无需科学上网，比官方低价20-40%，注册即送免费额度！" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeniya.cn/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/api.png" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  :root {
+    --primary: #0070f3;
+    --primary-light: #3399ff;
+    --background: #f9fbfe;
+    --card-bg: #fff;
+    --text: #2c3e50;
+    --text-light: #5d6d81;
+    --border: #e1e8f7;
+    --radius-md: 12px;
+    --shadow-md: 0 4px 12px rgba(0,112,243,0.12);
+    --max-width: 1100px;
+    --header-height: 70px;
+    --transition: all 0.3s ease;
+    --font-heading: 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+    --font-body: 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+    --highlight-color: #ff5722;
+  }
+
+  *, *::before, *::after {margin:0; padding:0; box-sizing: border-box;}
+  html {scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 20px);}
+  body {
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  a:hover, a:focus {
+    color: var(--primary-light);
+    text-decoration: underline;
+    outline: none;
+  }
+  p {
+    margin-bottom: 1.2rem;
+    color: var(--text-light);
+  }
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  /* Header */
+  header.site-header {
+    height: var(--header-height);
+    background: var(--card-bg);
+    box-shadow: var(--shadow-md);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+  }
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .site-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    user-select: none;
+  }
+  .site-logo i {
+    font-size: 1.9rem;
+    color: var(--primary);
+  }
+  nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+  }
+  nav.main-nav a.nav-link {
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    color: var(--primary);
+  }
+  nav.main-nav a.nav-link:hover,
+  nav.main-nav a.nav-link:focus {
+    background: var(--primary-light);
+    color: white;
+    outline: none;
+    text-decoration: none;
+  }
+  nav.main-nav a.nav-link.cta {
+    background: var(--primary);
+    color: white;
+  }
+  nav.main-nav a.nav-link.cta:hover,
+  nav.main-nav a.nav-link.cta:focus {
+    background: #005ab8;
+  }
+  @media (max-width: 600px) {
+    nav.main-nav ul {
+      display: none;
+    }
+    nav.main-nav.active ul {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: var(--header-height);
+      left: 0; right: 0;
+      background: var(--card-bg);
+      padding: 1rem 2rem;
+      box-shadow: var(--shadow-md);
+      border-top: 1px solid var(--border);
+    }
+    .menu-toggle {
+      display: block;
+    }
+  }
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary);
+  }
+
+  /* Hero */
+  .hero-section {
+    padding: calc(var(--header-height) + 4rem) 0 5rem;
+    background: linear-gradient(135deg, rgba(0,112,243,0.07), rgba(0,184,212,0.1));
+    color: var(--text);
+    text-align: center;
+  }
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+  .hero-subtitle {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+  }
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+    user-select: none;
+    border-radius: var(--radius-md);
+    padding: 0.9rem 2rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    background: var(--primary-dark);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    outline: none;
+    text-decoration: none;
+  }
+
+  /* Section Titles */
+  section.section {
+    margin-bottom: 4rem;
+  }
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    border-left: 6px solid var(--primary);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-light);
+    border-radius: 2px;
+  }
+
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+  .feature-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    padding: 2.2rem 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+  }
+  .feature-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  .feature-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+  }
+  .feature-desc {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.45;
+  }
+
+  /* API Grid */
+  .api-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+    gap: 2rem;
+  }
+  .api-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .api-logo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  .api-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+  }
+  .api-desc {
+    flex-grow: 1;
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .api-cta {
+    align-self: flex-start;
+  }
+  .btn-cta {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  .btn-cta:hover, .btn-cta:focus {
+    background: var(--primary-dark);
+    outline: none;
+  }
+
+  /* Footer */
+  footer.site-footer {
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    user-select: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav.main-nav.active ul {
+      padding: 1rem 1.5rem;
+    }
+    .features-grid, .api-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .feature-title, .api-title {
+      font-size: 1.2rem;
+    }
+    .section-title {
+      font-size: 1.65rem;
+      padding-left: 0.7rem;
+    }
+  }
+
+  /* 特色强调超链接 */
+  a.zzzzapi-highlight {
+    font-weight: 700;
+    color: var(--highlight-color);
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="#hero" class="site-logo" aria-label="回到首页">
+      <i class="fas fa-exchange-alt"></i> 简易API中转站
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="切换导航菜单" aria-expanded="false" aria-controls="mainNav">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="主导航">
+      <ul>
+        <li><a href="https://jeniya.cn/" target="_blank" rel="noopener" class="nav-link cta">立即开通</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="hero" class="hero-section">
+  <div class="container hero-content">
+    <div class="update-badge" aria-label="最新更新">
+      <i class="fas fa-sync-alt"></i> 2025年4月最新上线
+    </div>
+    <h1 class="hero-title">一站式简易API中转服务，连接多元AI模型</h1>
+    <p class="hero-subtitle">国内高速访问ChatGPT、DeepSeek、Claude、Grok等热门AI接口，免翻墙，易对接，低门槛，助力开发者与企业智能升级。</p>
+    <div class="hero-buttons">
+      <a href="https://jeniya.cn/" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-bolt"></i> 立即开通API服务</a>
+    </div>
+  </div>
+</section>
+
+<main class="main-content container" role="main">
+
+  <section id="features" class="section" tabindex="-1">
+    <h2 class="section-title">我们的优势</h2>
+    <div class="features-grid">
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+        <h3 class="feature-title">多接口融合</h3>
+        <p class="feature-desc">整合 ChatGPT、DeepSeek、Claude、Grok 等多种AI接口，满足多样化需求，无需多处注册管理。</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <h3 class="feature-title">快捷稳定</h3>
+        <p class="feature-desc">基于国内高性能服务器中转，网络稳定，响应迅速，保障服务连续不中断。</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-wallet"></i></div>
+        <h3 class="feature-title">灵活经济</h3>
+        <p class="feature-desc">合理经济的价格策略，帮助您有效控制AI成本，无论个人用户还是企业都轻松承受。</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-toolbox"></i></div>
+        <h3 class="feature-title">标准兼容</h3>
+        <p class="feature-desc">API与官方完全兼容，无需复杂适配，快速切换即可启用，无缝升级您的智能产品。</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <h3 class="feature-title">全天候支持</h3>
+        <p class="feature-desc">专业技术团队7×24小时在线，为您快速响应并解决任何技术和服务问题。</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3 class="feature-title">安全保障</h3>
+        <p class="feature-desc">全链路加密传输，严谨隐私策略，让您的数据和API调用安全无忧。</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="api-services" class="section" tabindex="-1">
+    <h2 class="section-title">支持的核心API服务</h2>
+    <div class="api-grid">
+      <article class="api-card" tabindex="0" aria-label="ChatGPT API服务">
+        <div class="api-logo" style="color:#10a37f;"><i class="fas fa-comment-dots"></i></div>
+        <h3 class="api-title" style="color:#10a37f;">ChatGPT API</h3>
+        <p class="api-desc">丰富的OpenAI官方模型支持，包括GPT-3.5、GPT-4、GPT-4o等，适合多场景对话、生成及分析。</p>
+        <div class="api-cta">
+          <a href="https://jeniya.cn/" target="_blank" rel="noopener" class="btn-cta">开通服务</a>
+        </div>
+      </article>
+
+      <article class="api-card" tabindex="0" aria-label="Claude API服务">
+        <div class="api-logo" style="color:#7142dc;"><i class="fas fa-brain"></i></div>
+        <h3 class="api-title" style="color:#7142dc;">Claude API</h3>
+        <p class="api-desc">Anthropic Claude系列，善于自然语言理解和生成，支持多轮对话和复杂指令执行。</p>
+        <div class="api-cta">
+          <a href="https://jeniya.cn/" target="_blank" rel="noopener" class="btn-cta">开通服务</a>
+        </div>
+      </article>
+
+      <article class="api-card" tabindex="0" aria-label="DeepSeek API服务">
+        <div class="api-logo" style="color:#0070f3;"><i class="fas fa-search"></i></div>
+        <h3 class="api-title" style="color:#0070f3;">DeepSeek API</h3>
+        <p class="api-desc">国产大语言模型，擅长代码生成与推理，适合科研和行业应用，对中文支持尤为深度。</p>
+        <div class="api-cta">
+          <a href="https://jeniya.cn/" target="_blank" rel="noopener" class="btn-cta">开通服务</a>
+        </div>
+      </article>
+
+      <article class="api-card" tabindex="0" aria-label="Grok API服务">
+        <div class="api-logo" style="color:#e03c31;"><i class="fas fa-robot"></i></div>
+        <h3 class="api-title" style="color:#e03c31;">Grok API</h3>
+        <p class="api-desc">融合搜索和语言理解能力，实时信息检索，风趣幽默的交流风格，为应用增加特色交互体验。</p>
+        <div class="api-cta">
+          <a href="https://jeniya.cn/" target="_blank" rel="noopener" class="btn-cta">开通服务</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="how-to-use" class="section" tabindex="-1">
+    <h2>【图文教程】如何使用简易API中转站中转服务？</h2>
+    <ol style="margin-left: 1.3rem; margin-bottom: 2rem; color: var(--text-light); font-size: 1rem;">
+        <li><strong>第一步：</strong>访问<a href="https://jeniya.cn/" target="_blank" class="zzzzapi-highlight">简易API中转站官网</a>完成注册</li>
+        <li><strong>第二步：</strong>登录后进入控制台，创建API密钥</li>
+        <li><strong>第三步：</strong>选择需要使用的API服务（ChatGPT/Claude/DeepSeek/Grok等）</li>
+        <li><strong>第四步：</strong>根据文档说明调整API请求地址，开始集成</li>
+        <li><strong>第五步：</strong>充值账户或使用免费赠送额度开始API调用</li>
+    </ol>
+
+    <h2>API示例代码（Python）</h2>
+    <pre style="background:#f3f4f6; color:#222; padding:1rem; border-radius:8px; overflow-x:auto; font-size:0.9rem; line-height:1.4;">
+<code>
+# OpenAI API调用示例
+import requests
+
+API_KEY = "your_api_key"
+API_URL = "https://api.jeniya.com/v1/chat/completions"  # 简易API中转地址
+
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json"
+}
+
+data = {
+    "model": "gpt-4o",  # 使用高级模型
+    "messages": [
+        {"role": "system", "content": "你是一个专业助手"},
+        {"role": "user", "content": "请介绍简易API中转站的优势"}
+    ],
+    "temperature": 0.7,
+    "max_tokens": 1500
+}
+
+response = requests.post(API_URL, headers=headers, json=data)
+print(response.json())
+</code>
+    </pre>
+  </section>
+
+  <section id="faq" class="section faq-list" tabindex="-1" role="region" aria-label="常见问题解答">
+    <h2 class="section-title">常见问题解答</h2>
+
+    <article class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1btn" aria-label="展开问题1">
+        API中转是否会带来额外延迟？
+      </button>
+      <div id="faq1" class="faq-answer" aria-labelledby="faq1btn">
+        <div class="faq-answer-content">
+          <p>基于国内多节点部署与线路优化，延迟极低，且整体响应速度较跨国访问官方API更快，更加稳定。</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2btn" aria-label="展开问题2">
+        是否支持多模型API统一调用？
+      </button>
+      <div id="faq2" class="faq-answer" aria-labelledby="faq2btn">
+        <div class="faq-answer-content">
+          <p>支持多种AI模型API的统一中转服务，涵盖ChatGPT、Claude、DeepSeek、Grok等，为您提供一站式调用解决方案。</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3btn" aria-label="展开问题3">
+        安全与隐私如何保障？
+      </button>
+      <div id="faq3" class="faq-answer" aria-labelledby="faq3btn">
+        <div class="faq-answer-content">
+          <p>采用全链路加密传输与访问权限管控，严格保护API密钥和用户数据安全，保障您的隐私不被泄露。</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="faq4btn" aria-label="展开问题4">
+        如何快速接入接口？
+      </button>
+      <div id="faq4" class="faq-answer" aria-labelledby="faq4btn">
+        <div class="faq-answer-content">
+          <p>完全兼容官方API规范，无需更改业务逻辑，替换请求地址即可快速切换到简易API中转服务。</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq5" id="faq5btn" aria-label="展开问题5">
+        是否提供技术支持？
+      </button>
+      <div id="faq5" class="faq-answer" aria-labelledby="faq5btn">
+        <div class="faq-answer-content">
+          <p>提供7×24小时专业技术支持，帮助您快速解决调用及集成过程中遇到的问题。</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="cta-section" aria-label="立即行动">
+    <div class="container">
+      <h2 class="cta-title">立即启用简易API中转服务</h2>
+      <p class="cta-desc">为您的智能产品搭建稳健、高效、经济的API桥梁，快速对接主流AI大模型，助力您的业务腾飞！</p>
+      <a href="https://jeniya.cn/" target="_blank" rel="noopener" class="btn btn-cta" role="button" aria-label="立即开通简易API中转站">
+        <i class="fas fa-rocket"></i> 立即开通
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>© 2025 简易API中转站 - 智能API服务专家 | <a href="https://jeniya.cn/" target="_blank" rel="noopener">https://jeniya.cn/</a></p>
+  </div>
+</footer>
+
+<script>
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      faqButtons.forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        const panel = document.getElementById(b.getAttribute('aria-controls'));
+        if(panel) panel.style.maxHeight = null;
+      });
+      if(!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        if(panel) panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+    btn.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if(menuToggle && mainNav){
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.classList.toggle('active');
+    });
+  }
+</script>
+</body>
+</html>
